@@ -1,22 +1,22 @@
 # Visual Search Asymmetry: Deep Nets and Humans Share Similar Inherent Biases
 
-This contains all the code required to reproduce the results shown in our paper [[1](#cite_vsa)]. To make things simple we have provided bash scripts which can be used to directly run the specified models to produce the results shown in the paper. If you want to evaluate different parts of the model individually, use the notebook file `runExp.ipynb` inside the `vs_exp/eccNET`directory.
+This contains all the code required to reproduce the results shown in our paper [[1](#cite_vsa)]. To make things simple we have provided bash scripts that can be used to directly run the specified models to produce the results shown in the paper. If you want to evaluate different parts of the model individually, use the notebook file `runExp.ipynb` inside the `vs_exp/eccNET`directory.
 
 ## Environment Preparation
 
-First of all you will need to prepare your environment to run these code. Make sure you have Ananconda installed on your machine, if you do not have you can follow the instruction from [here](https://docs.anaconda.com/anaconda/install/) to install it. Ananconda will be used to create a virtual environment with all the packages and dependencies which are used in our code.
+First of all you will need to prepare your environment to run these codes. Make sure you have Ananconda installed on your machine, if you do not have you can follow the instruction from [here](https://docs.anaconda.com/anaconda/install/) to install it. Anaconda will be used to create a virtual environment with all the packages and dependencies which are used in our code.
 
-We have provided a `prepDirectory.sh` bash script for you to quickly prepare your envirionment. Run the following commands:
+We have provided a `prepDirectory.sh` bash script for you to quickly prepare your environment. Run the following commands:
 
 ```
 chmod +x prepDirectory.sh
 ./prepDirectory.sh
 ```
 
-The above script will download all the experiment dataset, pretrained weights, and GBVS model from a dropbox links. The script will automatically place them at the relevant directory location.
-Next the script will create an anaconda envirionment with all the required packages with name "vsa_klab".
+The above script will download all the experiment datasets, pre-trained weights, and GBVS models from a dropbox link. The script will automatically place them at the relevant directory location.
+Next, the script will create an anaconda environment with all the required packages with the name "vsa_klab".
 
-Once, the directory is prepared activate the conda envirionment by running `conda activate vsa_klab`.
+Once, the directory is prepared activate the conda environment by running `conda activate vsa_klab`.
 
 ## Running Visual Search Experiments
 
@@ -27,7 +27,7 @@ chmod +x runExp_eccNET.sh
 ./runExp_eccNET.sh
 ```
 
-This will perform all the visual asymmetry search experiments using our proposed eccNET model. It takes 28 mins to run all the experiment on a single NVIDIA GeForce RTX 2080 Ti Rev. A (11GB) GPU. The predicted files will be saved in: `./vs_exp/eccNET/out/eccNET`
+This will perform all the visual asymmetry search experiments using our proposed eccNET model. It takes 28 mins to run all the experiments on a single NVIDIA GeForce RTX 2080 Ti Rev. A (11GB) GPU. The predicted files will be saved in: `./vs_exp/eccNET/out/eccNET`
 
 **To run the experiment using the ablation model. Run the following command:**
 
@@ -36,14 +36,14 @@ chmod +x runExp_ablation.sh
 ./runExp_ablation.sh
 ```
 
-This will perform all the visual asymmetry search experiments using all the ablated models in Fig5B in the texts (except the GBVS model which requires you to run in matlab). It takes 2 hours and 15 mins to run all the experiment on a single NVIDIA GeForce RTX 2080 Ti Rev. A (11GB) GPU. The predicted files will be saved in: `./vs_exp/eccNET/out/MODEL_NAME` for DL based models. For chance the files will be saved in: `./vs_exp/chance` and pixelMatch will be saved in: `./vs_exp/pixelMatch`. Note model name eccNET_0_0_1 is the model eccNET_18-->17.
+This will perform all the visual asymmetry search experiments using all the ablated models in Fig5B in the texts (except the GBVS model which requires you to run in Matlab). It takes 2 hours and 15 mins to run all the experiments on a single NVIDIA GeForce RTX 2080 Ti Rev. A (11GB) GPU. The predicted files will be saved in: `./vs_exp/eccNET/out/MODEL_NAME` for DL based models. For chance, the files will be saved in: `./vs_exp/chance` and pixelMatch will be saved in: `./vs_exp/pixelMatch`. Note model name eccNET_0_0_1 is the model eccNET_18-->17.
 
 **To run the experiments using GBVS:**
-Go to the following directory: `vs_exp/gbvs/` and open `visual_search.m` in MATLAB and run. The predictions will be save inside: `vs_exp/gbvs/out_data`. This can take significant amount of time, the GBVS package does not support GPU. It approximately took ~12 hours for us to run all the expeirments on Intel® Core™ i7-8565U CPU with 8 GB of RAM.
+Go to the following directory: `vs_exp/gbvs/` and open `visual_search.m` in MATLAB and run. The predictions will be save inside: `vs_exp/gbvs/out_data`. This can take a significant amount of time, the GBVS package does not support GPU. It approximately took ~12 hours for us to run all the experiments on Intel® Core™ i7-8565U CPU with 8 GB of RAM.
 
 ## Producing the results and figures from the predictions generated by the models
 
-Note that the reository already contains all the predicted files so that you do not necessarily need to run all the models to generate predictions. Again you can either use the relevant `ipynb` notebook files inside the `vs_exp` directory or simply run the bashscript provided by us to generate all the results and figures.
+Note that the repository already contains all the predicted files so that you do not necessarily need to run all the models to generate predictions. Again you can either use the relevant `ipynb` notebook files inside the `vs_exp` directory or simply run the bashscript provided by us to generate all the results and figures.
 
 ```
 chmod +x generateResults.sh
@@ -54,7 +54,7 @@ The above code will generate all the figures and plots inside the `vs_exp/result
 
 ## Citations
 
-1. <a name="cite_vsa"></a> Shashi Kant Gupta, Mengmi Zhang, Chia-Chien Wu, Jeremy M. Wolfe, and Gabriel Kreiman. Visual Search Asymmetry: Deep Nets and Humans Share Similar Inherent Biases, *arXiv preprint arXiv:addID*. [URL][paper]
+1. <a name="cite_vsa"></a> Gupta, S.K., Zhang, M., Wu, C., Wolfe, J., & Kreiman, G. (2021). Visual Search Asymmetry: Deep Nets and Humans Share Similar Inherent Biases. [URL][paper]
 
 [//]: #
-[paper]: <https://arxiv.org/addID>
+[paper]: <https://arxiv.org/abs/2106.02953>
