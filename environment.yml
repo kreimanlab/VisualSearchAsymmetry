@@ -1,4 +1,4 @@
-name: vsa_klab
+name: vsa_nips_klab
 channels:
   - plotly
   - intel
