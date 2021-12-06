@@ -1,5 +1,5 @@
 # Visual Search Asymmetry: Deep Nets and Humans Share Similar Inherent Biases
-This repository contains an implementation of our paper published in NeurIPS 2021 [[1](#cite_vsa)][[OpenReview][openreview]] [[arXiv][arxiv]].
+This repository contains an implementation of our paper published in NeurIPS 2021 [[1](#cite_vsa)][[OpenReview][openreview]]. The video presentation can be viewable [HERE](https://www.youtube.com/watch?v=pA_sTT3ii9Y&t=724s). The poster is available [HERE](https://d2b38104-6cb6-430b-95b9-765197711bda.usrfiles.com/ugd/d2b381_772a90ce15ce4c6ca91a3310b42a6563.pdf).
 
 It contains all the code required to reproduce the results shown in our paper. To make things simple we have provided several bash scripts that can be directly used to run the specified models to produce results shown in the paper. If you want to evaluate different parts of the model individually, use the notebook file `runExp.ipynb` inside the `vs_exp/eccNET`directory.
 
