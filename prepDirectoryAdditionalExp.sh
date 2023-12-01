@@ -13,7 +13,7 @@ echo "##########################################"
 echo "## Downloading Additional Models        ##"
 echo "##########################################"
 echo ""
-wget --no-check-certificate https://dl.dropboxusercontent.com/s/k0tv7jzxjxt1bzz/data_augmented_trained_model.zip?dl=1 -O ./data_augmented_trained_model.zip
+wget --no-check-certificate https://huggingface.co/shashikg/visual_search_klab/resolve/main/data_augmented_trained_model.zip -O ./data_augmented_trained_model.zip
 echo "Extracting..."
 unzip data_augmented_trained_model.zip
 

@@ -13,7 +13,7 @@ echo "###############################"
 echo "## Downloading VGG16 Weights ##"
 echo "###############################"
 echo ""
-wget --no-check-certificate https://dl.dropboxusercontent.com/s/6r196ijkubpxchs/pretrained_model.zip?dl=1 -O ./pretrained_model.zip
+wget --no-check-certificate https://huggingface.co/shashikg/visual_search_klab/resolve/main/pretrained_model.zip -O ./pretrained_model.zip
 unzip pretrained_model.zip
 
 echo ""
@@ -21,7 +21,7 @@ echo "###############################"
 echo "## Downloading GBVS Model    ##"
 echo "###############################"
 echo ""
-wget --no-check-certificate https://dl.dropboxusercontent.com/s/v9tbt3b061iab6x/gbvs.zip?dl=1 -O ./gbvs.zip
+wget --no-check-certificate https://huggingface.co/shashikg/visual_search_klab/resolve/main/gbvs.zip -O ./gbvs.zip
 echo "Extracting..."
 unzip gbvs.zip -d ./vs_exp/
 
