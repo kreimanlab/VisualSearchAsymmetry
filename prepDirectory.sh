@@ -4,7 +4,7 @@ echo "###############################"
 echo "##   Preparing Datasets      ##"
 echo "###############################"
 echo ""
-wget --no-check-certificate https://dl.dropboxusercontent.com/s/fhftat0mghqkkyu/dataset.zip?dl=1 -O ./dataset.zip
+wget --no-check-certificate https://huggingface.co/datasets/shashikg/visual_search_klab/resolve/main/dataset_asymmetry.zip -O ./dataset.zip
 echo "Extracting..."
 unzip dataset.zip -d ./vs_exp/
 

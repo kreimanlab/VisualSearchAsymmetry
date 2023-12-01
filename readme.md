@@ -1,5 +1,5 @@
 # Visual Search Asymmetry: Deep Nets and Humans Share Similar Inherent Biases
-This repository contains an implementation of our paper published in NeurIPS 2021 [[1](#cite_vsa)][[OpenReview][openreview]]. The video presentation can be viewable [HERE](https://www.youtube.com/watch?v=pA_sTT3ii9Y&t=724s). The poster is available [HERE](https://d2b38104-6cb6-430b-95b9-765197711bda.usrfiles.com/ugd/d2b381_772a90ce15ce4c6ca91a3310b42a6563.pdf).
+This repository contains an implementation of our paper published in NeurIPS 2021 [[1](#cite_vsa)][[NeurIPS][neurips]]. The video presentation can be viewable [HERE (MIT CBMM)](https://www.youtube.com/watch?v=pA_sTT3ii9Y&t=724s) and [HERE (NeurIPS)](https://slideslive.com/38966964/visual-search-asymmetry-deep-nets-and-humans-share-similar-inherent-biases). The poster is available [HERE](https://d2b38104-6cb6-430b-95b9-765197711bda.usrfiles.com/ugd/d2b381_772a90ce15ce4c6ca91a3310b42a6563.pdf).
 
 It contains all the code required to reproduce the results shown in our paper. To make things simple we have provided several bash scripts that can be directly used to run the specified models to produce results shown in the paper. If you want to evaluate different parts of the model individually, use the notebook file `runExp.ipynb` inside the `vs_exp/eccNET`directory.
 
@@ -99,8 +99,8 @@ bash generateSaccadeResults.sh
 
 ## Citation
 
-<a name="cite_vsa"></a> Shashi Kant Gupta, Mengmi Zhang, Chia-Chien Wu, Jeremy M. Wolfe, & Gabriel Kreiman (2021). Visual Search Asymmetry: Deep Nets and Humans Share Similar Inherent Biases. In Thirty-Fifth Conference on Neural Information Processing Systems. [[OpenReview][openreview]] [[arXiv][arxiv]]
+<a name="cite_vsa"></a> Shashi Kant Gupta, Mengmi Zhang, Chia-Chien Wu, Jeremy M. Wolfe, & Gabriel Kreiman (2021). Visual Search Asymmetry: Deep Nets and Humans Share Similar Inherent Biases. In Thirty-Fifth Conference on Neural Information Processing Systems. [[NeurIPS][neurips]] [[arXiv][arxiv]]
 
 [//]: #
 [arxiv]: <https://arxiv.org/abs/2106.02953>
-[openreview]: <https://openreview.net/forum?id=ar85GL0N11>
+[neurips]: <https://proceedings.neurips.cc/paper_files/paper/2021/hash/37f0e884fbad9667e38940169d0a3c95-Abstract.html>

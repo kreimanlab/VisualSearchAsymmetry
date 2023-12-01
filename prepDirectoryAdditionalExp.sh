@@ -4,7 +4,7 @@ echo "###############################"
 echo "##   Preparing Datasets      ##"
 echo "###############################"
 echo ""
-wget --no-check-certificate https://dl.dropboxusercontent.com/s/l1qj0bq2qq54ml1/dataset_saccade.zip?dl=1 -O ./dataset_saccade.zip
+wget --no-check-certificate https://huggingface.co/datasets/shashikg/visual_search_klab/resolve/main/dataset_saccade.zip -O ./dataset_saccade.zip
 echo "Extracting..."
 unzip dataset_saccade.zip -d ./vs_saccade_exp/
 
