@@ -7,7 +7,6 @@ It contains all the code required to reproduce the results shown in our paper. T
 Visual search is a ubiquitous and often challenging daily task, exemplified by looking for the car keys at home or a friend in a crowd. An intriguing property of some classical search tasks is an asymmetry such that finding a target A among distractors B can be easier than finding B among A. To elucidate the mechanisms responsible for asymmetry in visual search, we propose a computational model that takes a target and a search image as inputs and produces a sequence of eye movements until the target is found. The model integrates eccentricity-dependent visual recognition with target-dependent top-down cues. We compared the model against human behavior in six paradigmatic search tasks that show asymmetry in humans. Without prior exposure to the stimuli or task-specific training, the model provides a plausible mechanism for search asymmetry. We hypothesized that the polarity of search asymmetry arises from experience with the natural environment. We tested this hypothesis by training the model on augmented versions of ImageNet where the biases of natural images were either removed or reversed. The polarity of search asymmetry disappeared or was altered depending on the training protocol. This study highlights how classical perceptual properties can emerge in neural network models, without the need for task-specific training, but rather as a consequence of the statistical properties of the developmental diet fed to the model.
 
 
-
 ## Reproducing Results From NeurIPS Paper
 
 ### Environment Preparation
@@ -96,6 +95,22 @@ Finally to produce different subplots shown in **Figure S16-13** run the below c
 ```
 bash generateSaccadeResults.sh
 ```
+
+
+## Training/Finetuning eccNET
+
+Training/Finetuning of eccNET architecture on classification tasks can be done using the following python script: `vgg16_training/train_eccnet_imagenet.py`. The checkpoints for our finetuning experiment for eccNET is available [here](https://huggingface.co/shashikg/visual_search_klab/tree/main/checkpoints/eccNET).
+
+
+## Training on Augmented Imagenet
+
+Training on augmented imagenet to study the role of training regime can be done using the following python script: `vgg16_training/train_vgg16_imagenet.py`. The checkpoints for our training experiment is available [here](https://huggingface.co/shashikg/visual_search_klab/tree/main/checkpoints/AsymmetryAugmentedVGG16). To generate the augmented imagenet data use the notebooks available here: [extras/imagenet_asymmetry_augmentation](extras/imagenet_asymmetry_augmentation)
+
+
+## Generating Additional Stimuli
+
+We used the scripts available here: [extras/experiment_stimuli_generators](extras/experiment_stimuli_generators) to generate the asymmetry experiment stimuli. These can be used to used generate additional stimuli with different configuration for further studies. Please refer to our supplementary material for the configuration used in our paper.
+
 
 ## Citation
 
